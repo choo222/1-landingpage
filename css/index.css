@@ -24,6 +24,13 @@ h3{
   color: #ddd;
 }
 
+.topBtn{
+  position: fixed;
+  bottom: 10px;right: 10px;
+  transform: scale(0.65);
+  filter: hue-rotate(-45deg);
+  z-index: 100;
+}
 
 /* header_______________________________________ */
 header{
@@ -50,16 +57,7 @@ nav{
   line-height: 80px;
   position: relative;
 }
-.gnb li:before{
-  content: '';
-  position: absolute;
-  top: 0;left: 0;
-  width: 100%;height: 100%;
-  background: url(../image/menu_black.png) no-repeat center/cover;
-  background-size: 80px;
-  transform: rotate(270deg);
-  z-index: -1;
-}
+
 .gnb li a{
   display: inline-block;
   width: 100px;
@@ -68,7 +66,20 @@ nav{
   font-family: HeirofLightBold;
   font-weight: 500;
   color: #fff;
-  
+  transition: 0.2s;
+}
+.gnb li a:before{
+  content: '';
+  position: absolute;
+  top: 0;left: 0;
+  width: 100%;height: 100%;
+  background: url(../image/menu_black.png) no-repeat center/contain;
+  background-size: 80px;
+  z-index: -1;
+}
+.gnb li a:hover{
+  filter: brightness(2);
+  scale: 1.08;
 }
 .logo img{
   width: 100px;
@@ -145,7 +156,6 @@ main{
   align-items: center;
   margin: 0 auto;
   overflow: hidden;
-  box-sizing: none;
   position: relative;
   color: #ddd;
 }
@@ -356,11 +366,57 @@ main{
 .items1 a:hover{
   transform: scale(1.02);
   box-shadow: 0 0 5px rgba(255,255,255,0.7);
+  border: 1px solid #fff;
 }
 .items2 a:hover{
   transform: scale(1.02);
   border: 1px solid red;
   box-shadow: 0 0 7px rgba(255, 0, 0, 1);
+}
+.items1 a:nth-child(-n+15){position: relative;}
+.items1 a:nth-child(1):hover:before{content: '카마도 탄지로';}
+.items1 a:nth-child(2):hover:before{content: '카마도 네즈코';}
+.items1 a:nth-child(3):hover:before{content: '아가츠마 젠이츠';}
+.items1 a:nth-child(4):hover:before{content: '하시비라 이노스케';}
+.items1 a:nth-child(5):hover:before{content: '츠유리 카나오';}
+.items1 a:nth-child(6):hover:before{content: '토미오카 기유';}
+.items1 a:nth-child(7):hover:before{content: '코쵸우 시노부';}
+.items1 a:nth-child(8):hover:before{content: '칸로지 미츠리';}
+.items1 a:nth-child(9):hover:before{content: '이구로 오바나이';}
+.items1 a:nth-child(10):hover:before{content: '우즈이 텐겐';}
+.items1 a:nth-child(11):hover:before{content: '히메지마 교메이';}
+.items1 a:nth-child(12):hover:before{content: '토키토 무이치로';}
+.items1 a:nth-child(13):hover:before{content: '시나즈가와 사네미';}
+.items1 a:nth-child(14):hover:before{content: '시나즈가와 겐야';}
+.items1 a:nth-child(15):hover:before{content: '꺾쇠 까마귀';}
+.items1 a:nth-child(-n+15):hover:before{
+  position: absolute;
+  width: 240px;height: 150px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 130px;
+}
+.items2 a:nth-child(-n+6){position: relative;}
+.items2 a:nth-child(1):hover:before{content: '키부츠지 무잔';}
+.items2 a:nth-child(2):hover:before{content: '도우마';}
+.items2 a:nth-child(3):hover:before{content: '아카자';}
+.items2 a:nth-child(4):hover:before{content: '코쿠시보';}
+.items2 a:nth-child(5):hover:before{content: '카이가쿠';}
+.items2 a:nth-child(6):hover:before{content: '나키메';}
+.items2 a:nth-child(-n+6):hover:before{
+  position: absolute;
+  width: 200px;height: 120px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 110px;
 }
 
 
